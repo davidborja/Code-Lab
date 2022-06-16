@@ -1,5 +1,18 @@
 # Code-Lab 
 
+## Generate a new SSH key
+### Generate-ssh: ssh-keygen -t ed25519 -C "your_email@example.com"
+### Init agent-ssh: eval "$(ssh-agent -s)"
+### Create config file: touch ~/.ssh/config
+    ```
+    Host *
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/id_ed25519
+    ```
+
+### Add public key: ssh-add -K ~/.ssh/id_ed25519
+    
 ## Instalation Guide.
 
 ### 1.- First install virtualenv: pip3 install virtualenv
