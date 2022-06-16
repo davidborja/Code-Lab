@@ -23,6 +23,9 @@
 
 ### 4.- Install requirements: pip install -r requirements.txt
 
+## Precommit configuration
+
+### 1.- install pre-commit: pre-commit install
 
 ## API Implementation
 
