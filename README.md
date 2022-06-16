@@ -1,6 +1,6 @@
 # Code-Lab 
 
-## Instalation Guide
+## Instalation Guide.
 
 ### 1.- First install virtualenv: pip3 install virtualenv
 
