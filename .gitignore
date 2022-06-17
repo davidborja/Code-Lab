@@ -7,3 +7,7 @@ __pycache__/
 
 # Migrations Local
 migrations_local/
+
+# Coverage
+.coverage
+htmlcov/

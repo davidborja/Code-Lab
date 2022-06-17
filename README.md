@@ -33,6 +33,11 @@
 ### create alembic code: python migrate.py db migrate --directory migrations_local
 ### sql code: python migrate.py db upgrade --directory migrations_local
 
+## Test
+
+### Coverage: pytest -v --cov=app/tests --cov-report=html
+### Unit testing: pytest -s -v app/tests
+
 ## API Implementation
 
 1. Using Flask or Django (preferably Flask), implement a RESTful API with a `GET` endpoint named `/api/v1/shopping/statistics` that returns the total of money spent grouped by category. This endpoint should also accept a request parameter named `category`. If such parameter is sent, we should only return that category total.
