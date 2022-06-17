@@ -31,7 +31,7 @@
 
 ### create directory: python migrate.py db init --directory migrations_local
 ### create alembic code: python migrate.py db migrate --directory migrations_local
-### create alembic code: python migrate.py db upgrade --directory migrations_local
+### sql code: python migrate.py db upgrade --directory migrations_local
 
 ## API Implementation
 
