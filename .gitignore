@@ -1,2 +1,6 @@
 # Environments
 enviroment-lab/
+.env
+
+# Cache
+__pycache__/
