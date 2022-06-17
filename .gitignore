@@ -4,3 +4,6 @@ enviroment-lab/
 
 # Cache
 __pycache__/
+
+# Migrations Local
+migrations_local/
