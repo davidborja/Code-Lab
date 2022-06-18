@@ -33,6 +33,10 @@
 ### create alembic code: python migrate.py db migrate --directory migrations_local
 ### sql code: python migrate.py db upgrade --directory migrations_local
 
+## Seeders
+
+### create products: flask seed run
+
 ## Test
 
 ### Coverage: pytest -v --cov=app/tests --cov-report=html
