@@ -13,6 +13,15 @@ class Product(TimeStampModel):
     quantity = db.Column(Integer, default=0)
     percentage_discount = db.Column(Float, default=0.0)
 
+    @staticmethod
+    def get_products_by_category(category):
+        data = Product.query.filter_by(category=category).all()
+        return data
+
+    @staticmethod
+    def get_categories():
+        return db.session.query(Product.category).distinct().all()
+
     def update(self, data):
         for key, item in data.items():
             setattr(self, key, item)
