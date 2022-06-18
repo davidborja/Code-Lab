@@ -1,5 +1,6 @@
 # Environments
 enviroment-lab/
+<<<<<<< HEAD
 .env
 
 # Cache
@@ -11,3 +12,8 @@ migrations_local/
 # Coverage
 .coverage
 htmlcov/
+=======
+
+# cache
+__pycache__/
+>>>>>>> refactoring-code
