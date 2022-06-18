@@ -5,6 +5,7 @@ from app.integrations.db import db
 from flask import Blueprint
 from flask_restx import Api
 from flask import Flask
+from flask_seeder import FlaskSeeder
 
 from .config.config import config
 
@@ -17,10 +18,12 @@ from app.api.resources.shopping_statistics import ShoppingStatistics
 
 def create_app(setting_module="local"):
     app = Flask(__name__, instance_relative_config=True)
+    seeder = FlaskSeeder()
 
     app.config.from_object(config[setting_module])
 
     db.init_app(app)
+    seeder.init_app(app, db)
     ma.init_app(app)
 
     blue_print = Blueprint("api", __name__, url_prefix="/api")
