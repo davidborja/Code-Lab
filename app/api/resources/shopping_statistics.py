@@ -1,8 +1,6 @@
 from flask_restx import Resource
 from flask import request
-
-# from flask import request, jsonify, make_response
-# from marshmallow import ValidationError
+from marshmallow import ValidationError
 from app.models.product_model import Product
 
 from app.api.doc.shopping_statistics import (
@@ -64,6 +62,10 @@ class ShoppingStatistics(Resource):
             data = {"data": shopping_statistics}
 
             return data, 200
+        except ValidationError as instance:
+            exception = instance.args[0]
+            data = {"data": exception}
+            return data, 400
         except Exception as instance:
             data = {"data": instance.args[0]}
-            return data
+            return data, 500
